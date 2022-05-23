@@ -6,6 +6,7 @@ function append(){
     data.forEach(function (elem,index){
         //console.log(elem)
         let div= document.createElement("div")
+        div.setAttribute("id","all_products")
 
         let image= document.createElement("img")
         image.src=elem.image
@@ -20,6 +21,7 @@ function append(){
         price.innerText=elem.price
 
         var btn=document.createElement("button")
+        btn.setAttribute("id","remove_product")
         btn.innerText="Remove"
         btn.addEventListener("click", function(){
             remove(index)
